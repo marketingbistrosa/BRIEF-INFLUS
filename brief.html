@@ -58,7 +58,7 @@ body{font-family:'Figtree',sans-serif;background:var(--cr);color:var(--dk);}
 @keyframes orb{0%{transform:rotate(0deg) translateX(80px) rotate(0deg);}100%{transform:rotate(360deg) translateX(80px) rotate(-360deg);}}
 
 /* LAYOUT */
-.outer{max-width:860px;margin:0 auto;padding-bottom:60px;}
+.outer{max-width:860px;margin:0 auto;padding-bottom:60px;} .hero{width:100%;}
 .body{padding:0 20px;}
 @media(min-width:600px){.body{padding:0 44px;}}
 .sec{margin-top:36px;}
@@ -170,8 +170,7 @@ body{font-family:'Figtree',sans-serif;background:var(--cr);color:var(--dk);}
   <p>El link que abriste no corresponde a ningún influencer de la lista.<br>Revisá el ID en la URL o <a href="index.html" style="color:var(--or)">volvé al índice</a>.</p>
 </div>
 
-<div class="outer" id="brief-content">
-  <div class="hero">
+<div class="hero" id="brief-content-hero">
     <div class="hero-tex"></div>
     <div class="hero-grad"></div>
     <div class="hero-left">
@@ -193,7 +192,8 @@ body{font-family:'Figtree',sans-serif;background:var(--cr);color:var(--dk);}
       </div>
     </div>
   </div>
-
+</div>
+<div class="outer" id="brief-content">
   <div class="body">
     <div class="sec">
       <div class="sec-lbl">Hola, <span id="dFirst">crack</span> 👋</div>
@@ -341,7 +341,7 @@ function init(){
       cargar(inf);
       document.getElementById('btn-back').style.display='block';
     } else {
-      document.getElementById('brief-content').style.display='none';
+      document.getElementById('brief-content').style.display='none'; document.getElementById('brief-content-hero').style.display='none';
       document.getElementById('not-found').style.display='block';
     }
   } else {
